@@ -20,7 +20,7 @@ defmodule GringottsPayment.Mixfile do
   def application do
     [
       mod: {GringottsPayment.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :gringotts]
     ]
   end
 
