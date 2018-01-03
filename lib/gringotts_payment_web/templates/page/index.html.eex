@@ -13,7 +13,6 @@
     <div class="stripe s3"></div>
   </div>
   <section class="container-lg">
-    <!--Example 5-->
     <div class="cell example example5">
       <form>
         <div id="example5-paymentRequest">
