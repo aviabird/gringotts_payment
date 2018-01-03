@@ -32,22 +32,6 @@ import "phoenix_html"
     locale: window.__exampleLocale
   });
 
-  function makePayment(token) {
-    let fetchData = {
-      method: 'POST',
-      body: JSON.stringify(token),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      }),
-      mode: 'cors',
-    }
-
-    fetch(url_purchase, fetchData)
-    .then((data) => {
-      console.log('received data', data.json());
-    });
-  }
-
   function registerElements(elements, exampleName) {
     var formClass = '.' + exampleName;
     var example = document.querySelector(formClass);
@@ -90,6 +74,34 @@ import "phoenix_html"
         }
       });
     });
+
+    function makePayment(token) {
+      let fetchData = {
+        method: 'POST',
+        body: JSON.stringify(token),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+        mode: 'cors',
+      }
+  
+      fetch(url_purchase, fetchData)
+      .then(response => response.json()
+        ).then((data) => {
+          checkIfSuccess(data);
+      });
+    }
+  
+    function checkIfSuccess(data) {
+      if (data.success === true) {
+        example.classList.remove('submitting');
+        example.classList.add('submitted');
+      } else {
+        example.classList.remove('submitting');        
+        error.classList.add('visible');
+        errorMessage.innerText = data.data["error"]["message"];
+      }
+    }
   
     // Listen on the form's 'submit' handler...
     form.addEventListener('submit', function(e) {
@@ -119,14 +131,13 @@ import "phoenix_html"
       // in the additional customer data we collected in our form.
       stripe.createToken(elements[0], additionalData).then(function(result) {
         // Stop loading!
-        example.classList.remove('submitting');
+        // example.classList.remove('submitting');
   
         if (result.token) {
           // If we received a token, show the token ID.
-          console.log('token', result.token.id);
           example.querySelector('.token').innerText = result.token.id;
           makePayment(result.token);
-          example.classList.add('submitted');
+          // example.classList.add('submitted');
         } else {
           // Otherwise, un-disable inputs.
           enableInputs();
@@ -183,54 +194,4 @@ import "phoenix_html"
   });
   card.mount("#example5-card");
   registerElements([card], "example5");
-
-
-  /**
-   * Payment Request Element
-   */
-  var paymentRequest = stripe.paymentRequest({
-    country: "US",
-    currency: "usd",
-    total: {
-      amount: 2500,
-      label: "Total"
-    },
-    requestShipping: true,
-    shippingOptions: [
-      {
-        id: "free-shipping",
-        label: "Free shipping",
-        detail: "Arrives in 5 to 7 days",
-        amount: 0
-      }
-    ]
-  });
-  paymentRequest.on("token", function(result) {
-    var example = document.querySelector(".example5");
-    example.querySelector(".token").innerText = result.token.id;
-    example.classList.add("submitted");
-    result.complete("success");
-  });
-
-  var paymentRequestElement = elements.create("paymentRequestButton", {
-    paymentRequest: paymentRequest,
-    style: {
-      paymentRequestButton: {
-        theme: "light"
-      }
-    }
-  });
-
-  paymentRequest.canMakePayment().then(function(result) {
-    if (result) {
-      document.querySelector(".example5 .card-only").style.display = "none";
-      document.querySelector(
-        ".example5 .payment-request-available"
-      ).style.display =
-        "block";
-      paymentRequestElement.mount("#example5-paymentRequest");
-    }
-  });
-
-  
 })();
