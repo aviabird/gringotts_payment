@@ -1,36 +1,25 @@
+
 <div class="jumbotron">
   <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <p class="lead">Test Application<br />Gringotts Payment Stripe.</p>
 </div>
 
 <div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
+  <button id="pay" type="button" class="btn btn-primary">Payment</button>
+  <meta name="csrf" id = 'csrf-token' value="<%= Plug.CSRFProtection.get_csrf_token() %>">
+  <script src="https://js.stripe.com/v3/"></script>
+  <form action="/charge" method="post" id="payment-form">
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- a Stripe Element will be inserted here. -->
+    </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
+    <!-- Used to display form errors -->
+    <div id="card-errors" role="alert"></div>
+    </div>
+    <button class="btn btn-primary">Submit Payment</button>
+  </form>
 </div>
