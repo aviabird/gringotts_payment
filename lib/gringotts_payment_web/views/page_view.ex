@@ -8,7 +8,7 @@ defmodule GringottsPaymentWeb.PageView do
     }
   end
 
-  def render("purchase.josn", %{error: data}) do
+  def render("purchase.json", %{error: data}) do
     %{
       success: false,
       data: data
