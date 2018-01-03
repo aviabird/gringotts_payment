@@ -17,6 +17,11 @@ defmodule GringottsPaymentWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+  end
+
+  scope "/api", GringottsPaymentWeb do
+    pipe_through :api # Use the default browser stack
+
     post "/purchase", PageController, :purchase
     options "/purchase", PageController, :options
   end

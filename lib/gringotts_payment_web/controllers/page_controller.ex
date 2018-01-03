@@ -10,9 +10,12 @@ defmodule GringottsPaymentWeb.PageController do
   end
 
   def purchase(conn, %{"id" => id }) do
-    IO.puts "id token #{id}"
-    value = Billing.purchase(Gringotts.Gateways.Stripe, 5, id, @options)
-    IO.puts "value #{inspect value}"
-    render conn, "index.html"
+    value = Billing.purchase(Stripe, 5, id, @options)
+    cond do
+      value["created"] ->
+        render conn, "purchase.json", success: value
+      value["error"] -> 
+        render conn, "purchase.json", error: value
+    end
   end
 end
