@@ -41,8 +41,8 @@ defmodule GringottsPayment.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:gringotts, "~> 1.0.2"},
-      # {:gringotts, path: "../cenpos/gringotts"},
+      # {:gringotts, "~> 1.0.2"},
+      {:gringotts, git: "https://github.com/aviabird/gringotts.git", branch: "dev"},
       {:cors_plug, "~> 1.2"}
     ]
   end
