@@ -23,7 +23,7 @@ import "phoenix_html"
 (function() {
   "use strict";
   // url to purchase method
-  const url_purchase = 'http://0.0.0.0:4000/api/purchase';
+  const url_purchase = '/api/purchase';
   var stripe = Stripe('pk_test_xx96UepEgmX12vaKbpJp1p70');
   var elements = stripe.elements({
     // Stripe's examples are localized to specific languages, but if
@@ -97,7 +97,7 @@ import "phoenix_html"
         example.classList.remove('submitting');
         example.classList.add('submitted');
       } else {
-        example.classList.remove('submitting');        
+        example.classList.remove('submitting');
         error.classList.add('visible');
         errorMessage.innerText = data.data["error"]["message"];
       }
