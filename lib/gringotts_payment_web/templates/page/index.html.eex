@@ -1,24 +1,8 @@
 <div class="globalContent">
-<<<<<<< bf860aeceb6efa5eb00186cf7d407fa47db45741
   <main>
   <section class="container-lg">
     <div class="cell example example5">
       <form>
-=======
-  <script src="https://js.stripe.com/v3/"></script>
-  <main>
-  <div class="stripes">
-    <div class="stripe s1"></div>
-    <div class="stripe s2"></div>
-    <div class="stripe s3"></div>
-  </div>
-  <section class="container-lg">
-    <div class="cell example example5">
-      <form>
-        <div id="example5-paymentRequest">
-          <!--Stripe paymentRequestButton Element inserted here-->
-        </div>
->>>>>>> modified frontend
         <fieldset>
           <legend class="card-only" data-tid="elements_examples.form.pay_with_card">Pay with card</legend>
           <legend class="payment-request-available" data-tid="elements_examples.form.enter_card_manually">Or enter card details</legend>
