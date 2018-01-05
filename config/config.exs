@@ -28,6 +28,13 @@ adapter: Gringotts.Gateways.Stripe,
 secret_key: "sk_test_edkxVxJoAcveTRpNy4Sz0Rc0",
 default_currency: "USD"
 
+# Configures Gringotts Cams Payment
+config :gringotts, Gringotts.Gateways.Cams,
+adapter: Gringotts.Gateways.Cams,
+username: "testintegrationc",
+password: "password9",
+default_currency: "USD"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
