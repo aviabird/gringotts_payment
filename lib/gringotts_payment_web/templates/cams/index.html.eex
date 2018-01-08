@@ -1,89 +1,64 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Gringotts::Cams</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
     <h4 align="center">Cams Payment Gateway</h4>
     <div class="container-fluid well">
     <span class="border border-success">
     <h5 align="center">Pay using Credit Card</h5>
-      <form>
+      <form id="camsform">
         <div class="form-row" style="margin-bottom: 10px">
           <div class="col-md-12 go mb-3">
-            <label for="validationDefault01">Name</label>
-            <input type="text" class="form-control" id="validationDefault01" placeholder="Name" value="" required>
+            <label for="customerName">Name</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Name" value="" required>
           </div>
         </div>
         <div class="form-row" >
           <div class="col-md-6 go mb-3">
-            <label for="validationDefault02">E-mail</label>
-            <input type="text" class="form-control" id="validationDefault02" placeholder="Email address" value="" required>
+            <label for="customerEmail">E-mail</label>
+            <input type="text" class="form-control" id="customerEmail" placeholder="Email address" value="" required>
           </div>
           <div class="col-md-6 go mb-3">
-            <label for="validationDefault03">Phone</label>
-            <input type="text" class="form-control" id="validationDefault03" placeholder="Phone" value="" required>
+            <label for="customerPhone">Phone</label>
+            <input type="text" class="form-control" id="customerPhone" placeholder="Phone" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-12 go mb-3">
-            <label for="validationDefault04">Address</label>
-            <input type="text" class="form-control" id="validationDefault04" placeholder="Address" value="" required>
+            <label for="customerAddress">Address</label>
+            <input type="text" class="form-control" id="customerAddress" placeholder="Address" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-4 go mb-3">
-            <label for="validationDefault04">City</label>
-            <input type="text" class="form-control" id="validationDefault05" placeholder="City" value="" required>
+            <label for="customerCity">City</label>
+            <input type="text" class="form-control" id="customerCity" placeholder="City" value="" required>
           </div>
           <div class="col-md-4 go mb-3">
-            <label for="validationDefault04">State</label>
-            <input type="text" class="form-control" id="validationDefault06" placeholder="State" value="" required>
+            <label for="customerState">State</label>
+            <input type="text" class="form-control" id="customerState" placeholder="State" value="" required>
           </div>
           <div class="col-md-4 go mb-3">
-            <label for="validationDefault04">Zip</label>
-            <input type="text" class="form-control" id="validationDefault07" placeholder="zip" value="" required>
+            <label for="customerZip">Zip</label>
+            <input type="text" class="form-control" id="customerZip" placeholder="zip" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-8 go mb-3">
-            <label for="validationDefault04">Card Number</label>
-            <input type="text" class="form-control" id="validationDefault08" placeholder="credit card number" value="" required>
+            <label for="ccNo">Card Number</label>
+            <input type="text" class="form-control" id="ccNo" placeholder="credit card number" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2 go mb-3">
-            <label for="validationDefault04">MMYY</label>
-            <input type="text" class="form-control" id="validationDefault09" placeholder="0918" value="" required>
+            <label for="ccExp">MMYY</label>
+            <input type="text" class="form-control" id="ccExp" placeholder="0918" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2 go mb-3">
-            <label for="validationDefault04">CVV</label>
-            <input type="text" class="form-control" id="validationDefault10" placeholder="123" value="" required>
+            <label for="ccCode">CVV</label>
+            <input type="text" class="form-control" id="ccCode" placeholder="123" value="" required>
           </div>
         </div>
         <center>
-        <button class="btn btn-primary" type="submit">Make Payment</button>
+        <button class="btn btn-primary" type="submit">Pay $25</button>
         </center>
       </form>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
