@@ -100,6 +100,7 @@ import "phoenix_html"
         example.classList.remove('submitting');
         error.classList.add('visible');
         errorMessage.innerText = data.data["error"]["message"];
+        enableInputs();
       }
     }
   
