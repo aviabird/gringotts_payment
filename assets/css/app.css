@@ -1569,12 +1569,12 @@ a, a:hover, a:focus {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #9169d8;
+  background: #655288;
 }
 
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid #47748b;
+  border-bottom: 1px solid #655288;
 }
 
 #sidebar ul p {
