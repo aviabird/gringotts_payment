@@ -287,7 +287,7 @@ main > .container-lg {
   flex-wrap: wrap;
   position: relative;
   max-width: 750px;
-  padding: 110px 20px 110px;
+  padding: 10px 0px 110px 100px;
 }
 
 main > .container-lg .cell {
@@ -860,12 +860,12 @@ a, a:hover, a:focus {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #9169d8;
+  background: #655288;
 }
 
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid #47748b;
+  border-bottom: 1px solid #655288;
 }
 
 #sidebar ul p {
