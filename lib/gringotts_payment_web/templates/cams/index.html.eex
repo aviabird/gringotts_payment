@@ -77,6 +77,7 @@
               onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             </div>
           </div>
+<<<<<<< 6593b1afa30cb700511b89e94397228436da9d63
           <div class="form-row">
             <div class="col-md-2  mb-3">
               <label style="color: #f2f0f7" for="ccCode">CVV</label>
@@ -106,6 +107,25 @@
    <div class="form-row">
           <div class="col-md-5">
             <span>Your Card Won't be charged.</span>
+=======
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 go mb-3">
+            <label for="ccNo">Card Number</label>
+            <input type="text" class="form-control" id="ccNo" placeholder="credit card number" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2 go mb-3">
+            <label for="ccExp">MM</label>
+            <input type="text" class="form-control" id="ccExpMM" placeholder="09" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2 go mb-3">
+            <label for="ccExp">YY</label>
+            <input type="text" class="form-control" id="ccExpYY" placeholder="18" value="" required>
+>>>>>>> Implmented purchase method
           </div>
           <div class="col-md-5" align="right">
             <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
