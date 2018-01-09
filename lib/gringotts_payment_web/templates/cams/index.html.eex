@@ -4,9 +4,13 @@
     <h5 align="center">Pay using Credit Card</h5>
       <form id="camsform">
         <div class="form-row" style="margin-bottom: 10px">
-          <div class="col-md-12 go mb-3">
-            <label for="customerName">Name</label>
-            <input type="text" class="form-control" id="customerName" placeholder="Name" value="" required>
+          <div class="col-md-6 go mb-3">
+            <label for="customerName">First Name</label>
+            <input type="text" class="form-control" id="customerFname" placeholder="First Name" value="" required>
+          </div>
+          <div class="col-md-6 go mb-3">
+            <label for="customerName">Last Name</label>
+            <input type="text" class="form-control" id="customerLname" placeholder="Last Name" value="" required>
           </div>
         </div>
         <div class="form-row" >
@@ -40,15 +44,21 @@
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-8 go mb-3">
+          <div class="col-md-6 go mb-3">
             <label for="ccNo">Card Number</label>
             <input type="text" class="form-control" id="ccNo" placeholder="credit card number" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2 go mb-3">
-            <label for="ccExp">MMYY</label>
-            <input type="text" class="form-control" id="ccExp" placeholder="0918" value="" required>
+            <label for="ccExp">MM</label>
+            <input type="text" class="form-control" id="ccExpMM" placeholder="09" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2 go mb-3">
+            <label for="ccExp">YY</label>
+            <input type="text" class="form-control" id="ccExpYY" placeholder="18" value="" required>
           </div>
         </div>
         <div class="form-row">
