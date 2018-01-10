@@ -1,3 +1,4 @@
+
 <div class="row cams-row">
   <div class="col-lg-10 camsbgcolor">
       <h5 align="center" style="color: #f2f0f7" id="stable">Pay using Credit Card</h5>
@@ -77,7 +78,6 @@
               onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             </div>
           </div>
-<<<<<<< 6593b1afa30cb700511b89e94397228436da9d63
           <div class="form-row">
             <div class="col-md-2  mb-3">
               <label style="color: #f2f0f7" for="ccCode">CVV</label>
@@ -107,25 +107,23 @@
    <div class="form-row">
           <div class="col-md-5">
             <span>Your Card Won't be charged.</span>
-=======
         </div>
         <div class="form-row">
-          <div class="col-md-6 go mb-3">
-            <label for="ccNo">Card Number</label>
-            <input type="text" class="form-control" id="ccNo" placeholder="credit card number" value="" required>
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="ccNo">Card Number</label>
+            <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-2 go mb-3">
-            <label for="ccExp">MM</label>
-            <input type="text" class="form-control" id="ccExpMM" placeholder="09" value="" required>
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccExp">MM</label>
+            <input type="text" class="form-control ctextbox" id="ccExpMM" placeholder="09" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2 go mb-3">
             <label for="ccExp">YY</label>
             <input type="text" class="form-control" id="ccExpYY" placeholder="18" value="" required>
->>>>>>> Implmented purchase method
           </div>
           <div class="col-md-5" align="right">
             <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
@@ -134,3 +132,22 @@
 </div>
 
 <script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccExp">YY</label>
+            <input type="text" class="form-control ctextbox" id="ccExpYY" placeholder="2018" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccCode">CVV</label>
+            <input type="text" class="form-control ctextbox" id="ccCode" placeholder="123" value="" required>
+          </div>
+        </div>
+        <center>
+        <button class="btn btn-primary bgbutton"  type="submit">Pay $25</button>
+        </center>
+         <fieldset>
+      </form>
+    </div>
+    <div class="loader" id="spin"></div>     
+    <h6>We wont charge you!</h6>
