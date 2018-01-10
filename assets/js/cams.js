@@ -3,10 +3,12 @@ export function cams() {
   noLoading();
   const url = '/api/cams/purchase';
   var form2 = document.getElementById("camsform");
+  var autoFill = document.getElementById("autofill");
   if (form2) {
     form2.addEventListener('submit', function (e) {
       e.preventDefault();
       disableForm();
+      disableMessage();
       loading();
       var first_name = document.getElementById("customerFname");
       var last_name = document.getElementById("customerLname");
@@ -38,7 +40,6 @@ export function cams() {
 
     });
   }
-
   function doPayment(params) {
     let fetchData = {
       method: 'POST',
@@ -81,32 +82,27 @@ export function cams() {
     document.getElementById("notify-error").style.display = "none";
     document.getElementById("notify-success").style.display = "none";
   }
-  function disableInputs() {
-    Array.prototype.forEach.call(
-      form2.querySelectorAll(
-        "input[type='text']"
-      ),
-      function (input) {
-        input.setAttribute('disabled', 'true');
-      }
-    );
-  }
-  function enableInputs() {
-    Array.prototype.forEach.call(
-      form.querySelectorAll(
-        "input[type='text']"
-      ),
-      function (input) {
-        input.removeAttribute('disabled');
-      }
-    );
-  }
   function disableForm() {
-    form2.style.visibility ="hidden"
+    form2.style.visibility = "hidden"
   }
   function enableForm() {
-    form2.style.visibility ="visible"
+    form2.style.visibility = "visible"
     form2.reset();
   }
-
+  if (autoFill) {
+    autoFill.addEventListener('click', function (e) {
+      document.getElementById("customerFname").value = "Gopal";
+      document.getElementById("customerLname").value = "Shimpi";
+      document.getElementById("customerAddress").value = "18,Vidya Apartment";
+      document.getElementById("customerEmail").value = "gopal@aviabird.com"
+      document.getElementById("customerCity").value = "Pune";
+      document.getElementById("customerPhone").value = "902-937-0273";
+      document.getElementById("customerState").value = "Maharashtra";
+      document.getElementById("customerZip").value = "411033";
+      document.getElementById("ccNo").value = "5431111111111111";
+      document.getElementById("ccExpMM").value = "09";
+      document.getElementById("ccExpYY").value = "2021";
+      document.getElementById("ccCode").value = "123";
+    });
+  }
 }

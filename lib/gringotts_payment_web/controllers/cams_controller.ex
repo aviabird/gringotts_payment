@@ -5,7 +5,7 @@ defmodule GringottsPaymentWeb.CamsController do
   alias Gringotts.CreditCard
   alias Gringotts.Gateways.Cams
 
-  @amount 990
+  @amount 25
   @currency "USD"
   def index(conn, _params) do
     render conn, "index.html"
