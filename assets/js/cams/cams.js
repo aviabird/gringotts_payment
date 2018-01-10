@@ -1,4 +1,5 @@
-export function cams() {
+(function(){
+  "use strict";
   disableMessage();
   noLoading();
   const url = '/api/cams/purchase';
@@ -10,6 +11,7 @@ export function cams() {
       disableForm();
       disableMessage();
       loading();
+      
       var first_name = document.getElementById("customerFname");
       var last_name = document.getElementById("customerLname");
       var address1 = document.getElementById("customerAddress");
@@ -74,13 +76,18 @@ export function cams() {
     if (div.style.display == "none") {
       div.style.display = "block";
     }
+    document.getElementById("stable").style.display = "none";
+    document.getElementById("processing").style.display = "block";
   }
   function noLoading() {
     document.getElementById("spin").style.display = "none";
+    document.getElementById("stable").style.display = "block";
+    document.getElementById("processing").style.display = "none";
   }
   function disableMessage() {
     document.getElementById("notify-error").style.display = "none";
     document.getElementById("notify-success").style.display = "none";
+    document.getElementById("processing").style.display = "none";
   }
   function disableForm() {
     form2.style.visibility = "hidden"
@@ -105,4 +112,4 @@ export function cams() {
       document.getElementById("ccCode").value = "123";
     });
   }
-}
+})();

@@ -27,7 +27,6 @@ config :gringotts, Gringotts.Gateways.Stripe,
 adapter: Gringotts.Gateways.Stripe,
 secret_key: "sk_test_edkxVxJoAcveTRpNy4Sz0Rc0",
 default_currency: "USD"
-
 # Configures Gringotts Cams Payment
 config :gringotts, Gringotts.Gateways.Cams,
 adapter: Gringotts.Gateways.Cams,

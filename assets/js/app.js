@@ -14,10 +14,9 @@
 
 import "phoenix_html"
 import {sidebar, sidebarCheck} from "./sidebar.js";
-import {cams} from "./cams.js";
 // Import local files
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 // import socket from "./socket"
 sidebar();
-cams();
+

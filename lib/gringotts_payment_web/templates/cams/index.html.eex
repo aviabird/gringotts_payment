@@ -2,7 +2,8 @@
 <button class="btn info" id="autofill" style="background:  gold;">Autofill</button>
 </div>
 <div class="container-fluid camsbgcolor">
-    <h5 align="center" style="color: #f2f0f7">Pay using Credit Card</h5>
+    <h5 align="center" style="color: #f2f0f7" id="stable">Pay using Credit Card</h5>
+    <h5 align="center" style="color: #f2f0f7" id="processing">Processing...</h5>
     <div class="alert-danger1 animate-bottom" id="notify-error"  >
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>   
           <p id ="error-msg" class="p-msg"></p>
@@ -90,3 +91,5 @@
     <div class="col-md-8  mb-3" align="right">
       <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
     </div>
+
+  <script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
