@@ -63,19 +63,19 @@
         <div class="form-row">
           <div class="col-md-2  mb-3">
             <label style="color: #f2f0f7" for="ccExp">MM</label>
-            <input type="text" class="form-control ctextbox" id="ccExpMM" placeholder="09" value="" required>
+            <input type="text" class="form-control ctextbox" id="ccExpMM" placeholder="mm" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2  mb-3">
             <label style="color: #f2f0f7" for="ccExp">YY</label>
-            <input type="text" class="form-control ctextbox" id="ccExpYY" placeholder="2018" value="" required>
+            <input type="text" class="form-control ctextbox" id="ccExpYY" placeholder="yyyy" value="" required>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2  mb-3">
             <label style="color: #f2f0f7" for="ccCode">CVV</label>
-            <input type="text" class="form-control ctextbox" id="ccCode" placeholder="123" value="" required>
+            <input type="text" class="form-control ctextbox" id="ccCode" placeholder="cvv" value="" required>
           </div>
         </div>
         <center>

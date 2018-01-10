@@ -44,7 +44,8 @@ defmodule GringottsPaymentWeb.CamsController do
       city: params[:city],
       state: params[:state],
       zip: params[:zip],
-      phone: params[:phone]
+      phone: params[:phone],
+      email: params[:email]
     }
     [billing_address: address,currency: @currency]
   end
