@@ -1,4 +1,5 @@
-export function cams() {
+(function(){
+  "use strict";
   disableMessage();
   noLoading();
   const url = '/api/cams/purchase';
@@ -10,6 +11,7 @@ export function cams() {
       disableForm();
       disableMessage();
       loading();
+      
       var first_name = document.getElementById("customerFname");
       var last_name = document.getElementById("customerLname");
       var address1 = document.getElementById("customerAddress");
@@ -61,7 +63,8 @@ export function cams() {
     if (data.success) {
       document.getElementById("notify-success").style.display = "block";
       document.getElementById("success-msg").style.display = "block";
-      document.getElementById("success-msg").innerHTML = "Transaction Purchase Successful.";
+      document.getElementById("success-msg")
+      .innerHTML = "Successful Purchase with Transaction ID:"+data.authorization;
     }
     else if (!data.success) {
       document.getElementById("notify-error").style.display = "block";
@@ -74,13 +77,18 @@ export function cams() {
     if (div.style.display == "none") {
       div.style.display = "block";
     }
+    document.getElementById("stable").style.display = "none";
+    document.getElementById("processing").style.display = "block";
   }
   function noLoading() {
     document.getElementById("spin").style.display = "none";
+    document.getElementById("stable").style.display = "block";
+    document.getElementById("processing").style.display = "none";
   }
   function disableMessage() {
     document.getElementById("notify-error").style.display = "none";
     document.getElementById("notify-success").style.display = "none";
+    document.getElementById("processing").style.display = "none";
   }
   function disableForm() {
     form2.style.visibility = "hidden"
@@ -96,7 +104,7 @@ export function cams() {
       document.getElementById("customerAddress").value = "18,Vidya Apartment";
       document.getElementById("customerEmail").value = "gopal@aviabird.com"
       document.getElementById("customerCity").value = "Pune";
-      document.getElementById("customerPhone").value = "902-937-0273";
+      document.getElementById("customerPhone").value = "9029370273";
       document.getElementById("customerState").value = "Maharashtra";
       document.getElementById("customerZip").value = "411033";
       document.getElementById("ccNo").value = "5431111111111111";
@@ -105,4 +113,4 @@ export function cams() {
       document.getElementById("ccCode").value = "123";
     });
   }
-}
+})();

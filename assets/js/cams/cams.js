@@ -63,8 +63,7 @@
     if (data.success) {
       document.getElementById("notify-success").style.display = "block";
       document.getElementById("success-msg").style.display = "block";
-      document.getElementById("success-msg")
-      .innerHTML = "Successful Purchase with Transaction ID:"+data.authorization;
+      document.getElementById("success-msg").innerHTML = "Transaction Purchase Successful.";
     }
     else if (!data.success) {
       document.getElementById("notify-error").style.display = "block";
@@ -104,7 +103,7 @@
       document.getElementById("customerAddress").value = "18,Vidya Apartment";
       document.getElementById("customerEmail").value = "gopal@aviabird.com"
       document.getElementById("customerCity").value = "Pune";
-      document.getElementById("customerPhone").value = "9029370273";
+      document.getElementById("customerPhone").value = "902-937-0273";
       document.getElementById("customerState").value = "Maharashtra";
       document.getElementById("customerZip").value = "411033";
       document.getElementById("ccNo").value = "5431111111111111";

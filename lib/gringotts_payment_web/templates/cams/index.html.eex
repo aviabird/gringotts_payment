@@ -156,3 +156,5 @@
     <div class="col-md-8  mb-3" align="right">
       <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
     </div>
+
+  <script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
