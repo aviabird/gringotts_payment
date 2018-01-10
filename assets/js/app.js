@@ -13,7 +13,6 @@
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
 import {sidebar, sidebarCheck} from "./sidebar.js";
-import {stripe} from "./stripe.js";
 // Import local files
 //
 // Local files can be imported directly using relative
@@ -22,4 +21,4 @@ import {stripe} from "./stripe.js";
 // import socket from "./socket"
 
 sidebar();
-stripe();
+// stripe();
