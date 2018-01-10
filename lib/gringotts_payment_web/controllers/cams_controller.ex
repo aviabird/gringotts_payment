@@ -5,7 +5,7 @@ defmodule GringottsPaymentWeb.CamsController do
   alias Gringotts.CreditCard
   alias Gringotts.Gateways.Cams
 
-  @amount 25
+  @amount 990
   @currency "USD"
   def index(conn, _params) do
     render conn, "index.html"
@@ -18,8 +18,8 @@ defmodule GringottsPaymentWeb.CamsController do
     options = buildOptions(params)
     IO.inspect(payment)
     IO.inspect(options)
-    {:ok, %Response{message: result}} = Billing.purchase(Cams, @amount, payment, options)
-    render conn,"purchase.json", message: result 
+    {:ok, %Response{message: result,success: success}} = Billing.purchase(Cams, @amount, payment, options)
+    render conn,"purchase.json", message: result , success: success
   end
 
   def to_keyword_list(data) do

@@ -1,74 +1,84 @@
-    <h4 align="center">Cams Payment Gateway</h4>
-    <div class="container-fluid well">
-    <span class="border border-success">
-    <h5 align="center">Pay using Credit Card</h5>
+<div class="container-fluid camsbgcolor">
+    <h5 align="center" style="color: #f2f0f7">Pay using Credit Card</h5>
+    <div class="alert-danger1 animate-bottom" id="notify-error"  >
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>   
+          <p id ="error-msg" class="p-msg"></p>
+        </div>
+        <div class="alert-success1 animate-bottom" id="notify-success" >
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>   
+          <p id ="success-msg" class="p-msg"></p>
+        </div>
       <form id="camsform">
-        <div class="form-row" style="margin-bottom: 10px">
-          <div class="col-md-6 go mb-3">
-            <label for="customerName">First Name</label>
-            <input type="text" class="form-control" id="customerFname" placeholder="First Name" value="" required>
+         <fieldset class="box">
+        <div class="form-row">
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="customerFname">First Name</label>
+            <input type="text" class="form-control ctextbox" id="customerFname" placeholder="First Name" value="" required>
           </div>
-          <div class="col-md-6 go mb-3">
-            <label for="customerName">Last Name</label>
-            <input type="text" class="form-control" id="customerLname" placeholder="Last Name" value="" required>
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="customerLname">Last Name</label>
+            <input type="text" class="form-control ctextbox" id="customerLname" placeholder="Last Name" value="" required>
           </div>
         </div>
         <div class="form-row" >
-          <div class="col-md-6 go mb-3">
-            <label for="customerEmail">E-mail</label>
-            <input type="text" class="form-control" id="customerEmail" placeholder="Email address" value="" required>
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="customerEmail">E-mail</label>
+            <input type="text" class="form-control ctextbox" id="customerEmail" placeholder="Email address" value="" required>
           </div>
-          <div class="col-md-6 go mb-3">
-            <label for="customerPhone">Phone</label>
-            <input type="text" class="form-control" id="customerPhone" placeholder="Phone" value="" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-12 go mb-3">
-            <label for="customerAddress">Address</label>
-            <input type="text" class="form-control" id="customerAddress" placeholder="Address" value="" required>
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="customerPhone">Phone</label>
+            <input type="text" class="form-control ctextbox" id="customerPhone" placeholder="Phone" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-4 go mb-3">
-            <label for="customerCity">City</label>
-            <input type="text" class="form-control" id="customerCity" placeholder="City" value="" required>
-          </div>
-          <div class="col-md-4 go mb-3">
-            <label for="customerState">State</label>
-            <input type="text" class="form-control" id="customerState" placeholder="State" value="" required>
-          </div>
-          <div class="col-md-4 go mb-3">
-            <label for="customerZip">Zip</label>
-            <input type="text" class="form-control" id="customerZip" placeholder="zip" value="" required>
+          <div class="col-md-12  mb-3">
+            <label style="color: #f2f0f7" for="customerAddress">Address</label>
+            <input type="text" class="form-control ctextbox" id="customerAddress" placeholder="Address" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-6 go mb-3">
-            <label for="ccNo">Card Number</label>
-            <input type="text" class="form-control" id="ccNo" placeholder="credit card number" value="" required>
+          <div class="col-md-4  mb-3">
+            <label style="color: #f2f0f7" for="customerCity">City</label>
+            <input type="text" class="form-control ctextbox" id="customerCity" placeholder="City" value="" required>
+          </div>
+          <div class="col-md-4  mb-3">
+            <label style="color: #f2f0f7" for="customerState">State</label>
+            <input type="text" class="form-control ctextbox" id="customerState" placeholder="State" value="" required>
+          </div>
+          <div class="col-md-4  mb-3">
+            <label style="color: #f2f0f7" for="customerZip">Zip</label>
+            <input type="text" class="form-control ctextbox" id="customerZip" placeholder="Zip" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-2 go mb-3">
-            <label for="ccExp">MM</label>
-            <input type="text" class="form-control" id="ccExpMM" placeholder="09" value="" required>
+          <div class="col-md-6  mb-3">
+            <label style="color: #f2f0f7" for="ccNo">Card Number</label>
+            <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-2 go mb-3">
-            <label for="ccExp">YY</label>
-            <input type="text" class="form-control" id="ccExpYY" placeholder="18" value="" required>
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccExp">MM</label>
+            <input type="text" class="form-control ctextbox" id="ccExpMM" placeholder="09" value="" required>
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-2 go mb-3">
-            <label for="ccCode">CVV</label>
-            <input type="text" class="form-control" id="ccCode" placeholder="123" value="" required>
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccExp">YY</label>
+            <input type="text" class="form-control ctextbox" id="ccExpYY" placeholder="2018" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2  mb-3">
+            <label style="color: #f2f0f7" for="ccCode">CVV</label>
+            <input type="text" class="form-control ctextbox" id="ccCode" placeholder="123" value="" required>
           </div>
         </div>
         <center>
-        <button class="btn btn-primary" type="submit">Pay $25</button>
+        <button class="btn btn-primary bgbutton"  type="submit">Pay $25</button>
         </center>
+         <fieldset>
       </form>
     </div>
+    <div class="loader" id="spin"></div>     
+    <h6>We wont charge you!</h6>
