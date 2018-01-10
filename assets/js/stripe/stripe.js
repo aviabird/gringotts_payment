@@ -1,4 +1,4 @@
-export function stripe() {
+(function(){
   "use strict";
   // url to purchase method
   const url_purchase = '/api/purchase';
@@ -173,4 +173,4 @@ export function stripe() {
   });
   card.mount("#example5-card");
   registerElements([card], "example5");
-}
+})();

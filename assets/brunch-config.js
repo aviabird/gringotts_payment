@@ -3,7 +3,8 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: { 
-        "js/app.js":  /[\S*?]\.js/
+        "js/app.js":  /[\S*?]\.js/,
+        "js/stripe.js": /^(js\/stripe)/
       }
 
       // To use a separate vendor.js bundle, specify two files path
@@ -54,7 +55,8 @@ exports.config = {
 
   modules: {
     autoRequire: {
-      "js/app.js": ["js/app"]
+      "js/app.js": ["js/app"],
+      "js/stripe.js": ["js/stripe/stripe.js"]
     }
   },
 
