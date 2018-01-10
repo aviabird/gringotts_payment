@@ -111,13 +111,16 @@
         <div class="form-row">
           <div class="col-md-6  mb-3">
             <label style="color: #f2f0f7" for="ccNo">Card Number</label>
-            <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" value="" required maxlength="16">
+            <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" value="" required 
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="16">
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2  mb-3">
             <label style="color: #f2f0f7" for="ccExp">MM</label>
-            <input type="text" class="form-control ctextbox" id="ccExpMM" placeholder="mm" value="" required maxlength="2">
+            <input type="text" class="form-control ctextbox" 
+            id="ccExpMM" placeholder="mm" value="" required maxlength="2" 
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
           </div>
         </div>
         <div class="form-row">
@@ -133,14 +136,18 @@
 
 <script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
           <div class="col-md-2  mb-3">
-            <label style="color: #f2f0f7" for="ccExp">YY</label>
-            <input type="text" class="form-control ctextbox" id="ccExpYY" placeholder="yyyy" value="" required maxlength="4">
+            <label style="color: #f2f0f7" for="ccExp">YYYY</label>
+            <input type="text" class="form-control ctextbox" id="ccExpYY" 
+            placeholder="yyyy" value="" required maxlength="4" 
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-2  mb-3">
             <label style="color: #f2f0f7" for="ccCode">CVV</label>
-            <input type="text" class="form-control ctextbox" id="ccCode" placeholder="cvv" value="" required maxlength="3">
+            <input type="text" class="form-control ctextbox" id="ccCode" 
+              placeholder="cvv" value="" required maxlength="3" 
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
           </div>
         </div>
         <center>
