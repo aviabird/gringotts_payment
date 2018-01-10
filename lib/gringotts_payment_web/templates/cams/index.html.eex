@@ -149,5 +149,10 @@
          <fieldset>
       </form>
     </div>
-    <div class="loader" id="spin"></div>     
-    <h6>We wont charge you!</h6>
+    <div class="loader" id="spin"></div> 
+    <div class="col-md-4  mb-3"> 
+      <span style="color: darkslateblue;">Your card won't be charged</span>    
+    </div>
+    <div class="col-md-8  mb-3" align="right">
+      <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
+    </div>
