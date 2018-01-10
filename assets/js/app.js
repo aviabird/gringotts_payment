@@ -19,4 +19,3 @@ import {sidebar, sidebarCheck} from "./sidebar.js";
 // paths "./socket" or full ones "web/static/js/socket".
 // import socket from "./socket"
 sidebar();
-

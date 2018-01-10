@@ -9,7 +9,6 @@
 
     <title>Hello GringottsPayment!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body>
