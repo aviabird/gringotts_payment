@@ -7,7 +7,6 @@
 .bgbutton{
   background: #fcfcfc !important;
   color: #9169d8 !important;
-  width: 350px !important;
 }
 .ctextbox{
   background-color: #fff0 !important;
@@ -20,12 +19,12 @@
   border-radius: 6px !important;
 }
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #9169d8; /* Blue */
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #9169d8; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -94,5 +93,46 @@
   text-align: center;
   height: auto;
 }
+.cams-row{
+  margin-right: -100px !important;
+  margin-left: 50px !important;
+  width: auto;
+}
+.hkE-addr__main {
+  line-height: 1em;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  transform: rotateX(0deg);
+  transform-origin: center top 0px;
+  z-index: 3;
+  user-select: none;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(247, 243, 244);
+  border-image: initial;
+  border-radius: 50%;
+  padding: 0.7em 0.2em;
+  background: #9169d8;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
+.hkE-addr__icon {
+  height: 20px;
+  display: block;
+  margin: 0px auto 0.3em;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+injected stylesheet
+.hkExt-address, .hkExt-address *, .hkExt-address ::before, .hkExt-address ::after {
+  box-sizing: border-box;
+}
 /*cams css end*/
