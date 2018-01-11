@@ -141,4 +141,9 @@ injected stylesheet
 .hkExt-address, .hkExt-address *, .hkExt-address ::before, .hkExt-address ::after {
   box-sizing: border-box;
 }
+.autofill{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
 /*cams css end*/
