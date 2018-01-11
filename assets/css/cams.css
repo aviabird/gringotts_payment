@@ -7,6 +7,7 @@
 .bgbutton{
   background: #fcfcfc !important;
   color: #9169d8 !important;
+  margin-top: 13px;
 }
 .ctextbox{
   background-color: #fff0 !important;
@@ -57,7 +58,7 @@
 /* The alert message box */
 .alert-danger1 {
   padding: 10px;
-  background-color: #f10b0b; /* Red */
+  background-color: #da7474; /* Red */
   color: white;
   margin-bottom: 10px;
   border: 1px solid rgb(255, 255, 255) ;
@@ -71,7 +72,6 @@
   border: 1px solid rgb(255, 255, 255) ;
   border-radius: 15px ;
 }
-
 /* The close button */
 .closebtn {
   margin-left: 15px;
@@ -83,7 +83,6 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
@@ -97,6 +96,10 @@
   margin-right: -100px !important;
   margin-left: 50px !important;
   width: auto;
+}
+.cams-label{
+  line-height: 5 !important;
+  color: #9169d8 !important;
 }
 .hkE-addr__main {
   line-height: 1em;
@@ -122,11 +125,13 @@
   background: #9169d8;
   transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 .hkE-addr__icon {
   height: 20px;
   display: block;
   margin: 0px auto 0.3em;
+}
+.hkE-addr__main:hover{
+  border-width: 0px;
 }
 svg:not(:root) {
   overflow: hidden;

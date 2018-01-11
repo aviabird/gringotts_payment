@@ -12,14 +12,11 @@ defmodule GringottsPaymentWeb.CamsController do
   end
 
   def purchase(conn, data) do
-
     params = to_keyword_list(data)
     payment = buildCard(params)
     options = buildOptions(params)
-    IO.inspect(payment)
-    IO.inspect(options)
-    {:ok, %Response{message: result,success: success}} = Billing.purchase(Cams, @amount, payment, options)
-    render conn,"purchase.json", message: result , success: success
+    {:ok, %Response{message: result,success: success, authorization: transaction_id}} = Billing.purchase(Cams, @amount, payment, options)
+    render conn,"purchase.json", message: result , success: success , authorization: transaction_id
   end
 
   def to_keyword_list(data) do

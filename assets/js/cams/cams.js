@@ -63,7 +63,8 @@
     if (data.success) {
       document.getElementById("notify-success").style.display = "block";
       document.getElementById("success-msg").style.display = "block";
-      document.getElementById("success-msg").innerHTML = "Transaction Purchase Successful.";
+      document.getElementById("success-msg")
+      .innerHTML = "Successful Purchase with Transaction ID:"+data.authorization;
     }
     else if (!data.success) {
       document.getElementById("notify-error").style.display = "block";

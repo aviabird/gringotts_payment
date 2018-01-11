@@ -92,8 +92,8 @@
       </form>
   </div>
   <div class="loader" id="spin"></div> 
-  <div class="col-lg-2">
-    <div class="hkE-addr__main animate-bottom " id="autofill">
+  <div class="col-lg-2 cams-row">
+    <div class="hkE-addr__main animate-bottom" id="autofill">
       <svg class="hkE-addr__icon animate-bottom"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 17.8">
         <g fill="none" stroke="#fff" stroke-width="1.39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
           <path d="M.7 6.9v-.5C.7 3.3 3.2.7 6.4.7S12 3.2 12 6.4v.5M6.4 17.1S.7 11.8.7 6.4M6.4 17.1s5.7-5.3 5.7-10.7"></path>
@@ -101,6 +101,7 @@
         </g>
       </svg>Autofill 
   </div>
+    <span class="label cams-label" style="font-size: 12px;">&#9989; Requires PCI Compliance</span>
   </div>  
    <div class="form-row">
           <div class="col-md-5">
