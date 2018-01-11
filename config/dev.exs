@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :gringotts_payment, GringottsPayment.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "arjun",
-  password: "psql",
+  username: "postgres",
+  password: "postgres",
   database: "gringotts_payment_dev",
   hostname: "localhost",
   pool_size: 10

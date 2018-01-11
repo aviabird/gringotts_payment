@@ -1,0 +1,116 @@
+<div class="row cams-row">
+  <div class="col-lg-10 camsbgcolor">
+      <h5 align="center" style="color: #f2f0f7" id="stable">Pay using Credit Card</h5>
+      <h5 align="center" style="color: #f2f0f7" id="processing">Processing...</h5>
+      <div class="alert-danger1 animate-bottom" id="notify-error"  >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>   
+        <p id ="error-msg" class="p-msg"></p>
+      </div>
+      <div class="alert-success1 animate-bottom" id="notify-success" >
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>   
+        <p id ="success-msg" class="p-msg"></p>
+      </div>
+      <form id="camsform">
+        <fieldset class="box">
+          <div class="form-row">
+            <div class="col-md-6  mb-3">
+              <label style="color: #f2f0f7" for="customerFname">First Name</label>
+              <input type="text" class="form-control ctextbox" id="customerFname" placeholder="First Name" value="" required>
+            </div>
+            <div class="col-md-6  mb-3">
+              <label style="color: #f2f0f7" for="customerLname">Last Name</label>
+              <input type="text" class="form-control ctextbox" id="customerLname" placeholder="Last Name" value="" required>
+            </div>
+          </div>
+          <div class="form-row" >
+            <div class="col-md-6  mb-3">
+              <label style="color: #f2f0f7" for="customerEmail">E-mail</label>
+              <input type="text" class="form-control ctextbox" id="customerEmail" placeholder="Email address" value="" required>
+            </div>
+            <div class="col-md-6  mb-3">
+              <label style="color: #f2f0f7" for="customerPhone">Phone</label>
+              <input type="text" class="form-control ctextbox" id="customerPhone"
+               placeholder="Phone" value="" required maxlength="10" 
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12  mb-3">
+              <label style="color: #f2f0f7" for="customerAddress">Address</label>
+              <input type="text" class="form-control ctextbox" id="customerAddress" placeholder="Address" value="" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4  mb-3">
+              <label style="color: #f2f0f7" for="customerCity">City</label>
+              <input type="text" class="form-control ctextbox" id="customerCity" placeholder="City" value="" required>
+            </div>
+            <div class="col-md-4  mb-3">
+              <label style="color: #f2f0f7" for="customerState">State</label>
+              <input type="text" class="form-control ctextbox" id="customerState" placeholder="State" value="" required>
+            </div>
+            <div class="col-md-4  mb-3">
+              <label style="color: #f2f0f7" for="customerZip">Zip</label>
+              <input type="text" class="form-control ctextbox" id="customerZip" placeholder="Zip" value="" required maxlength="6">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6  mb-3">
+              <label style="color: #f2f0f7" for="ccNo">Card Number</label>
+              <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" 
+              value="" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="16">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-2  mb-3">
+              <label style="color: #f2f0f7" for="ccExp">MM</label>
+              <input type="text" class="form-control ctextbox" 
+              id="ccExpMM" placeholder="mm" value="" required maxlength="2" 
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-2  mb-3">
+              <label style="color: #f2f0f7" for="ccExp">YYYY</label>
+              <input type="text" class="form-control ctextbox" id="ccExpYY" 
+              placeholder="yyyy" value="" required maxlength="4" 
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-2  mb-3">
+              <label style="color: #f2f0f7" for="ccCode">CVV</label>
+              <input type="text" class="form-control ctextbox" id="ccCode" 
+                placeholder="cvv" value="" required maxlength="3" 
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+          </div>
+          <center>
+            <button class="btn bgbutton"  type="submit">Pay $25</button>
+          </center>
+        <fieldset>
+      </form>
+  </div>
+  <div class="loader" id="spin"></div> 
+  <div class="col-lg-2 cams-row">
+    <div class="hkE-addr__main animate-bottom" id="autofill">
+      <svg class="hkE-addr__icon animate-bottom"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 17.8">
+        <g fill="none" stroke="#fff" stroke-width="1.39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M.7 6.9v-.5C.7 3.3 3.2.7 6.4.7S12 3.2 12 6.4v.5M6.4 17.1S.7 11.8.7 6.4M6.4 17.1s5.7-5.3 5.7-10.7"></path>
+          <circle cx="6.4" cy="6.9" r="2.2"></circle>
+        </g>
+      </svg>Autofill 
+  </div>
+    <span class="label cams-label" style="font-size: 12px;">&#9989; Requires PCI Compliance</span>
+  </div>  
+   <div class="form-row">
+          <div class="col-md-5">
+            <span>Your Card Won't be charged.</span>
+          </div>
+          <div class="col-md-5" align="right">
+            <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
+          </div>
+        </div>
+</div>
+
+<script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
