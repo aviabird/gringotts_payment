@@ -38,6 +38,8 @@ defmodule GringottsPaymentWeb.Endpoint do
     key: "_gringotts_payment_key",
     signing_salt: "a/cyR65r"
 
+  # for returning cors
+  plug CORSPlug, [origin: "http://localhost:4000"]
   plug GringottsPaymentWeb.Router
 
   @doc """
