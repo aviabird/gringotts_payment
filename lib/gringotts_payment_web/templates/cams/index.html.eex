@@ -106,46 +106,13 @@
     <span class="label cams-label" style="font-size: 12px;">&#9989; Requires PCI Compliance</span>
   </div>  
    <div class="form-row">
-          <div class="col-md-5">
-            <span>Your Card Won't be charged.</span>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6  mb-3">
-            <label style="color: #f2f0f7" for="ccNo">Card Number</label>
-            <input type="text" class="form-control ctextbox" id="ccNo" placeholder="credit card number" value="" required 
-            onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="16">
-          </div>
-          <div class="form-row">
-            <div class="col-md-2  mb-3">
-              <label style="color: #f2f0f7" for="ccCode">CVV</label>
-              <input type="text" class="form-control ctextbox" id="ccCode" 
-                placeholder="cvv" value="" required maxlength="3" 
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-2 go mb-3">
-            <label for="ccExp">YY</label>
-            <input type="text" class="form-control" id="ccExpYY" placeholder="18" value="" required>
-          </div>
-          <div class="col-md-5" align="right">
-            <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
-          </div>
-        </div>
-</div>
-
-<script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
-          <div class="col-md-2  mb-3">
-            <label style="color: #f2f0f7" for="ccExp">YYYY</label>
-            <input type="text" class="form-control ctextbox" id="ccExpYY" 
-            placeholder="yyyy" value="" required maxlength="4" 
-            onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-          </div>
-          <div class="col-md-5" align="right">
-            <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
-          </div>
-        </div>
+      <div class="col-md-5">
+        <span>Your Card Won't be charged.</span>
+      </div>
+      <div class="col-md-5" align="right">
+        <span><a href="https://github.com/aviabird/gringotts_payment">View source on GitHub</a></span>
+      </div>
+    </div>
 </div>
 
 <script src="<%= static_path(@conn, "/js/cams.js") %>"></script>
