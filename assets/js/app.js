@@ -11,6 +11,7 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
+
 import "phoenix_html"
 import {sidebar, sidebarCheck} from "./sidebar.js";
 // Import local files
@@ -18,4 +19,3 @@ import {sidebar, sidebarCheck} from "./sidebar.js";
 // paths "./socket" or full ones "web/static/js/socket".
 // import socket from "./socket"
 sidebar();
-
