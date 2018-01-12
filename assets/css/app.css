@@ -996,7 +996,7 @@ main > .container-lg {
   flex-wrap: wrap;
   position: relative;
   max-width: 750px;
-  padding: 110px 20px 110px;
+  padding: 10px 20px 110px 50px;
 }
 
 main > .container-lg .cell {
@@ -1600,4 +1600,13 @@ ul ul a {
   background: hsl(229, 48%, 61%);
 }
 
-
+.test-card{
+  width: 200px;
+  margin-top: 30px;
+  background-color: #b0a1cc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #f2f1f7;
+}

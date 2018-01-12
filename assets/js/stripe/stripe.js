@@ -3,6 +3,7 @@
   // url to purchase method
   const url_purchase = '/api/purchase';
   var stripe = Stripe('pk_test_xx96UepEgmX12vaKbpJp1p70');
+  var autofill = document.getElementById("autoFill");
   var elements = stripe.elements({
     // Stripe's examples are localized to specific languages, but if
     // you wish to have Elements automatically detect your user's locale,
@@ -173,4 +174,17 @@
   });
   card.mount("#example5-card");
   registerElements([card], "example5");
+  if(autofill) {
+    var example = document.querySelector('.example5');    
+    var form = example.querySelector('form');    
+    autofill.addEventListener('click', function(e) {
+      form.querySelector('#example5-name').value = 'Jane Doe';
+      form.querySelector('#example5-email').value = 'janedoe@gmail.com';
+      form.querySelector('#example5-phone').value = '(941)555-0123';
+      form.querySelector('#example5-address').value = '185 Barry Street';
+      form.querySelector('#example5-city').value = 'San Fransisco';
+      form.querySelector('#example5-state').value = 'CA';
+      form.querySelector('#example5-zip').value = '94107';      
+    });
+  }
 })();

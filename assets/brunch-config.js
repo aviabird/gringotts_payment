@@ -57,12 +57,8 @@ exports.config = {
   modules: {
     autoRequire: {
       "js/app.js": ["js/app"],
-<<<<<<< f7871cca51d8c00c1b6134b4fe35291936a5a9ca
       "js/stripe.js": ["js/stripe/stripe.js"],
       "js/cams.js": ["js/cams/cams.js"]
-=======
-      "js/stripe.js": ["js/stripe/stripe.js"]
->>>>>>> changes for page specific js
     }
   },
 
