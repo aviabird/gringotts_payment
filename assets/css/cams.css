@@ -104,7 +104,7 @@
 }
 .hkE-addr__main {
   line-height: 1em;
-  font-size: 0.7em;
+  font-size: 12px;
   font-weight: bold;
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -113,17 +113,17 @@
   transform-origin: center top 0px;
   z-index: 3;
   user-select: none;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
-  border-width: 1px;
+  border-width: 0px;
   border-style: solid;
   border-color: rgb(247, 243, 244);
   border-image: initial;
   border-radius: 50%;
   padding: 0.7em 0.2em;
-  background: #9169d8;
+  background: #e69113;
   transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .hkE-addr__icon {
@@ -132,7 +132,7 @@
   margin: 0px auto 0.3em;
 }
 .hkE-addr__main:hover{
-  border-width: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 2px;
 }
 svg:not(:root) {
   overflow: hidden;
