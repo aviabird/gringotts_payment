@@ -91,12 +91,13 @@
 </div>
 <div class="col-lg-2">
   <div class="hkE-addr__main animate-bottom" id="autoFill">
-    <svg class="hkE-addr__icon animate-bottom"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 17.8">
-      <g fill="none" stroke="#fff" stroke-width="1.39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M.7 6.9v-.5C.7 3.3 3.2.7 6.4.7S12 3.2 12 6.4v.5M6.4 17.1S.7 11.8.7 6.4M6.4 17.1s5.7-5.3 5.7-10.7"></path>
-        <circle cx="6.4" cy="6.9" r="2.2"></circle>
-      </g>
-    </svg>Autofill 
+    <span class="autofill">
+      <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>Autofill
+    </span>
+    <g fill="none" stroke="#fff" stroke-width="1.39" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M.7 6.9v-.5C.7 3.3 3.2.7 6.4.7S12 3.2 12 6.4v.5M6.4 17.1S.7 11.8.7 6.4M6.4 17.1s5.7-5.3 5.7-10.7"></path>
+      <circle cx="6.0" cy="6.0" r="1.5"></circle>
+    </g>
   </div>
   <div class="row">
     <div class='test-card'>

@@ -6,5 +6,5 @@
   <li class="active"><%= link "Stripe", to: page_path(@conn, :index) %></li>
   <li><a href="#">AuthorizeNet</a></li>
   <li><%= link "Cams", to: "/cams/" %>
-  <li><a href="#">Contact</a></li>
+  <li><a href="https://aviabird.com/">Contact</a></li>
 </ul>
