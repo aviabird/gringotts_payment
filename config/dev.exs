@@ -11,8 +11,14 @@ config :gringotts_payment, GringottsPaymentWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../assets", __DIR__)]]
+  watchers: [
+    node: [
+      "node_modules/brunch/bin/brunch",
+      "watch",
+      "--stdin",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # ## SSL Support
 #
@@ -51,8 +57,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :gringotts_payment, GringottsPayment.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "arjun",
-  password: "psql",
+  username: "postgres",
+  password: "",
   database: "gringotts_payment_dev",
   hostname: "localhost",
   pool_size: 10
