@@ -1,0 +1,149 @@
+/*cams css start*/
+.camsbgcolor{
+  background-color: #9169d8 !important;
+  border: 2px solid rgb(255, 255, 255) !important;
+  border-radius: 15px !important;
+}
+.bgbutton{
+  background: #fcfcfc !important;
+  color: #9169d8 !important;
+  margin-top: 13px;
+}
+.ctextbox{
+  background-color: #9169d8 !important;
+  color : white !important;
+  margin-bottom: 10px !important;
+}
+.box{
+  border: 1px solid #b5a4ed !important;
+  padding: 15px !important;
+  border-radius: 6px !important;
+}
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #9169d8; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+/* The alert message box */
+.alert-danger1 {
+  padding: 10px;
+  background-color: #da7474; /* Red */
+  color: white;
+  margin-bottom: 10px;
+  border: 1px solid rgb(255, 255, 255) ;
+  border-radius: 15px ;
+}
+.alert-success1 {
+  padding: 10px;
+  background-color: #39a30e; /* green */
+  color: white;
+  margin-bottom: 10px;
+  border: 1px solid rgb(255, 255, 255) ;
+  border-radius: 15px ;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+.p-msg{
+  margin: auto;
+  text-align: center;
+  height: auto;
+}
+.cams-row{
+  margin-right: -100px !important;
+  margin-left: 50px !important;
+  width: auto;
+}
+.cams-label{
+  line-height: 5 !important;
+  color: #9169d8 !important;
+}
+.hkE-addr__main {
+  line-height: 1em;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  transform: rotateX(0deg);
+  transform-origin: center top 0px;
+  z-index: 3;
+  user-select: none;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: rgb(247, 243, 244);
+  border-image: initial;
+  border-radius: 50%;
+  padding: 0.7em 0.2em;
+  background: #e69113;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hkE-addr__icon {
+  height: 20px;
+  display: block;
+  margin: 0px auto 0.3em;
+}
+.hkE-addr__main:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 2px;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+injected stylesheet
+.hkExt-address, .hkExt-address *, .hkExt-address ::before, .hkExt-address ::after {
+  box-sizing: border-box;
+}
+.autofill{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+/*cams css end*/
