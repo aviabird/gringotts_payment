@@ -33,6 +33,12 @@ adapter: Gringotts.Gateways.Cams,
 username: System.get_env("CAMS_USER_ID"),
 password: System.get_env("CAMS_PASSWORD"),
 default_currency: "USD"
+# Configures Gringotts Cams Payment
+config :gringotts, Gringotts.Gateways.Cams,
+adapter: Gringotts.Gateways.Cams,
+username: "testintegrationc",
+password: "password9",
+default_currency: "USD"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
