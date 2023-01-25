@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -58,7 +58,7 @@ config :phoenix, :stacktrace_depth, 20
 config :gringotts_payment, GringottsPayment.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "",
+  password: "postgres",
   database: "gringotts_payment_dev",
   hostname: "localhost",
   pool_size: 10

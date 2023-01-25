@@ -3,7 +3,7 @@
 #
 # This configuration file is loaded before any dependency and
 # is restricted to this project.
-use Mix.Config
+import Config
 
 # General application configuration
 config :gringotts_payment,
@@ -14,8 +14,7 @@ config :gringotts_payment, GringottsPaymentWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "oT7juVmRnXj+QCdIcNLAlEn4xjYYYN+yJRLaqMNUCKr2YZPbbJPbjaMpXvPyjqpF",
   render_errors: [view: GringottsPaymentWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: GringottsPayment.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub_server: GringottsPayment.PubSub 
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,22 +23,26 @@ config :logger, :console,
 
 # Configures Gringotts Stripe Payment
 config :gringotts, Gringotts.Gateways.Stripe,
-adapter: Gringotts.Gateways.Stripe,
-secret_key: System.get_env("SECRET_KEY"),
-default_currency: "USD"
+  adapter: Gringotts.Gateways.Stripe,
+  secret_key: System.get_env("SECRET_KEY"),
+  default_currency: "USD"
+
 # Configures Gringotts Cams Payment
 config :gringotts, Gringotts.Gateways.Cams,
-adapter: Gringotts.Gateways.Cams,
-username: System.get_env("CAMS_USER_ID"),
-password: System.get_env("CAMS_PASSWORD"),
-default_currency: "USD"
+  adapter: Gringotts.Gateways.Cams,
+  username: System.get_env("CAMS_USER_ID"),
+  password: System.get_env("CAMS_PASSWORD"),
+  default_currency: "USD"
+
 # Configures Gringotts Cams Payment
 config :gringotts, Gringotts.Gateways.Cams,
-adapter: Gringotts.Gateways.Cams,
-username: "testintegrationc",
-password: "password9",
-default_currency: "USD"
+  adapter: Gringotts.Gateways.Cams,
+  username: "testintegrationc",
+  password: "password9",
+  default_currency: "USD"
+
+config :phoenix, :json_library, Jason
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
